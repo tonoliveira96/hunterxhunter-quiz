@@ -1,0 +1,15 @@
+.main-container {
+  display: flex;
+  padding: 1rem;
+  margin: 1rem;
+  gap: 1rem;
+  background: #fff;
+  max-width: 720px;
+  border-radius: 1rem;
+  margin: auto;
+}
+
+.main-content {
+  width: 100%;
+  font-size: 1rem;
+}
