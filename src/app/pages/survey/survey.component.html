@@ -1,1 +1,21 @@
-<p>survey works!</p>
+<main class="max-w-3xl m-4">
+  <div class="sm:flex gap-4 bg-hxh-cream rounded-2xl shadow-lg">
+    <div class="flex flex-col p-4">
+      <ul>
+        <app-question index="" question="{{ currentQuestion.question }}"></app-question>
+        @for (item of currentQuestion.options; track $index) {
+          <li (click)="onSelectAnswer()" class="mt-2 text-hxh-dark-blue bg-white rounded-2xl px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white">
+            {{ item.answer }}
+          </li>
+        }
+      </ul>
+      <div>
+        <button
+          class="bg-hxh-blue py-2 px-4 rounded-2xl text-white font-bold mt-auto delay-200 hover:opacity-85"
+        >
+          CONTINUAR
+        </button>
+      </div>
+    </div>
+  </div>
+</main>
