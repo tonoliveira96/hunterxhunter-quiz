@@ -1,15 +1,23 @@
-.main-container {
+main {
+  height: 100%;
+  max-width: 720px;
+  margin: auto;
+}
+
+.container {
   display: flex;
-  padding: 1rem;
-  margin: 1rem;
   gap: 1rem;
   background: #fff;
-  max-width: 720px;
   border-radius: 1rem;
-  margin: auto;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
 }
 
 .main-content {
   width: 100%;
+  padding: 1rem;
   font-size: 1rem;
 }
