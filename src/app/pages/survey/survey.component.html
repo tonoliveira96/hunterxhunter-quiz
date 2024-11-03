@@ -1,25 +1,26 @@
 <main class="max-w-3xl m-4">
   <div class="h-4 rounded-full w-full bg-white dark:bg-neutral-600 mb-2">
     <div
-      class="h-4 rounded-full bg-hxh-yellow"
-      style="width: {{ (surveyIndex + 1) * 10 }}% ;"
+      class="h-4 rounded-full bg-hxh-orange"
+      style="width: {{ (surveyIndex + 1) * 10 }}%;"
     ></div>
   </div>
   <div class="sm:flex gap-4 bg-hxh-cream rounded-2xl shadow-2xl">
     <div class="w-full flex flex-col p-4">
-      <ul>
+      <div>
+        @if(!finished){
         <app-question
           question="{{ surveyIndex + 1 }}. {{ currentQuestion.question }}"
-        ></app-question>
+        />
         @for (item of currentQuestion.options; track $index) {
-        <li
+        <button
           (click)="onSelectAnswer(item.type)"
-          class="mt-2 text-hxh-dark-blue bg-white rounded-2xl px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white"
+          class="w-full mt-2 text-hxh-dark-blue text-left bg-white rounded-2xl px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white active:bg-hxh-blue"
         >
           {{ item.answer }}
-        </li>
-        }
-      </ul>
+        </button>
+        } }
+      </div>
       <div class="py-4">
         @if (finished) {
         <button
@@ -27,13 +28,6 @@
           class="bg-hxh-blue py-2 px-4 rounded-2xl text-white font-bold mt-auto disabled:opacity-50"
         >
           RESULTADO
-        </button>
-        }@else {
-        <button
-          (click)="onContinue()"
-          class="bg-hxh-blue py-2 px-4 rounded-2xl text-white font-bold mt-auto disabled:opacity-50"
-        >
-          CONTINUAR
         </button>
         }
       </div>

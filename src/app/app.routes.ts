@@ -11,7 +11,8 @@ export const routes: Routes = [
   {
     path: 'survey',
     component: SurveyComponent
-  }, {
+  },
+   {
     path: 'result',
     component: ResultComponent
   },

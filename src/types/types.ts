@@ -1,6 +1,6 @@
 ﻿interface QuestionsOptionsProps {
   answer: string;
-  type: string;
+  type: number;
 }
 
 export interface QuizQuestionsProps {
@@ -9,7 +9,7 @@ export interface QuizQuestionsProps {
 }
 
 export interface NenTypesProps {
-  tipo: string;
+  tipo: number;
   nomeIngles: string;
   caracteristicas: string;
   perfilPsicologico: string;
