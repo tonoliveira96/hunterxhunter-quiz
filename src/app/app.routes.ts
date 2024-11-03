@@ -14,5 +14,9 @@ export const routes: Routes = [
   }, {
     path: 'result',
     component: ResultComponent
+  },
+  {
+    path: '**',
+    redirectTo: '/'
   }
 ];

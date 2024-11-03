@@ -2,16 +2,22 @@
   <div class="sm:flex gap-4 bg-hxh-cream rounded-2xl shadow-2xl">
     <div class="flex flex-col p-4">
       <ul>
-        <app-question index="" question="{{ currentQuestion.question }}"></app-question>
+        <app-question
+          question="{{ currentQuestion.question }}"
+        ></app-question>
         @for (item of currentQuestion.options; track $index) {
-          <li (click)="onSelectAnswer()" class="mt-2 text-hxh-dark-blue bg-white rounded-2xl px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white">
-            {{ item.answer }}
-          </li>
+        <li
+          (click)="onSelectAnswer(item.type)"
+          class="mt-2 text-hxh-dark-blue bg-white rounded-2xl px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white"
+        >
+          {{ item.answer }}
+        </li>
         }
       </ul>
-      <div>
+      <div class="py-4">
         <button
-          class="bg-hxh-blue py-2 px-4 rounded-2xl text-white font-bold mt-auto delay-200 hover:opacity-85"
+          (click)="onContinue()"
+          class="bg-hxh-blue py-2 px-4 rounded-2xl text-white font-bold mt-auto hover:opacity-75"
         >
           CONTINUAR
         </button>

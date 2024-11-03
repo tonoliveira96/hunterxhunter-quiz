@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { QuizQuestionsProps, quizQuestions } from '../../../data/quiz';
+import { quizQuestions } from '../../../data/quiz';
+import { QuizQuestionsProps } from '../../../types/types';
 import { QuestionComponent } from '../../components/question/question.component';
 
 @Component({
@@ -14,14 +15,25 @@ export class SurveyComponent implements OnInit {
   currentQuestion: QuizQuestionsProps = {} as QuizQuestionsProps;
   surveyIndex: number = 0;
 
+  answers: string[] = [];
+  currentAnswer: string = "";
+
   ngOnInit(): void {
     if (quizQuestions) {
       this.currentQuestion = quizQuestions[this.surveyIndex];
     }
   }
 
-  onSelectAnswer() {
+  onSelectAnswer(nenType: string) {    
+    this.currentAnswer = nenType;
+    console.log(this.currentAnswer)
+  }
+
+  onContinue(){
+    this.answers.push(this.currentAnswer);
     this.surveyIndex += 1;
     this.currentQuestion = quizQuestions[this.surveyIndex];
+    this.currentAnswer = ""
+    console.log(this.answers)
   }
 }

@@ -1,14 +1,13 @@
 <main class="max-w-3xl m-4">
   <div class="sm:flex gap-4 bg-hxh-cream rounded-2xl shadow-2xl">
-    <div
-      class="h-96 overflow-hidden rounded-none sm:h-auto rounded-bl-2xl rounded-tl-2xl"
-    >
+    <div class="rounded-bl-2xl rounded-tl-2xl sm:h-auto">
       <img
-        class="object-cover sm:max-w-80"
-        src="https://imgsrv.crunchyroll.com/cdn-cgi/image/fit=contain,format=auto,quality=85,width=480,height=720/catalog/crunchyroll/cbb55a6382682bf71e91f685c6473c5a.jpg"
-        alt="Capa HunterxHunter"
+        class="sm:max-w-80"
+        src="assets/hxh-capa.png"
+        alt="Capa HunterxHunter Quiz"
       />
     </div>
+
     <div class="max-w-md flex flex-col p-4 gap-4">
       <h1 class="text-2xl font-bold text-hxh-dark-blue">
         Qual é a sua Categoria de Nen?
@@ -23,11 +22,12 @@
         >
         revelando seu estilo e habilidades potenciais no universo do anime.
       </p>
-      <button
-        class="bg-hxh-blue p-4 rounded-full text-white font-bold mt-auto delay-200 hover:opacity-85"
+      <a
+        [routerLink]="['survey']"
+        class="bg-hxh-blue p-4 rounded-full text-white text-center font-bold mt-auto hover:opacity-85"
       >
         INICIAR QUIZ
-      </button>
+      </a>
     </div>
   </div>
 </main>

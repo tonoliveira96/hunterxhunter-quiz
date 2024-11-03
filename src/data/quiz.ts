@@ -1,12 +1,4 @@
-﻿interface QuestionsOptionsProps {
-  answer: string;
-  type: string;
-}
-
-export interface QuizQuestionsProps {
-  question: string;
-  options: QuestionsOptionsProps[];
-}
+﻿import { NenTypesProps, QuizQuestionsProps } from '../types/types';
 
 export const quizQuestions: QuizQuestionsProps[] = [
   {
@@ -120,3 +112,49 @@ export const quizQuestions: QuizQuestionsProps[] = [
     ]
   }
 ];
+
+export const tiposNen: NenTypesProps[] = [
+  {
+    tipo: "Reforço",
+    nomeIngles: "Enhancement",
+    caracteristicas: "Indivíduos de Reforço são muitas vezes determinados, simples, diretos e confiantes. Eles costumam ser honestos e diretos nas interações, preferindo resolver problemas de forma prática e sem rodeios.",
+    perfilPsicologico: "São pessoas que tendem a não complicar as coisas, preferem ações diretas e são bastante emotivas. Seu foco em força bruta e resistência reflete uma abordagem focada em resultados.",
+    exemploPersonagem: "Gon Freecss, que é direto, com uma personalidade positiva e determinada."
+  },
+  {
+    tipo: "Emissão",
+    nomeIngles: "Emission",
+    caracteristicas: "Usuários de Emissão são geralmente temperamentais, impulsivos e emotivos. Eles podem ser impacientes e costumam agir rapidamente, preferindo manter distância em combate e na vida.",
+    perfilPsicologico: "Pessoas de Emissão têm uma natureza expressiva e geralmente se destacam por serem intensas, muitas vezes dispostas a explodir quando contrariadas. Elas canalizam suas emoções para executar ataques de forma eficaz.",
+    exemploPersonagem: "Leorio Paradinight, que possui uma personalidade expressiva e, por vezes, explosiva."
+  },
+  {
+    tipo: "Transformação",
+    nomeIngles: "Transmutation",
+    caracteristicas: "Pessoas de Transformação tendem a ser brincalhonas, excêntricas e imprevisíveis. São difíceis de ler, pois mudam de atitude facilmente e podem ser imprevisíveis e humoristas, o que surpreende os outros.",
+    perfilPsicologico: "Eles têm uma natureza versátil e adaptável, conseguindo adaptar suas emoções e energia ao ambiente ou situação. Gostam de manter um pouco de mistério e tendem a ser menos diretos.",
+    exemploPersonagem: "Killua Zoldyck, cuja personalidade brincalhona e imprevisível reflete seu tipo de Nen."
+  },
+  {
+    tipo: "Manipulação",
+    nomeIngles: "Manipulation",
+    caracteristicas: "Indivíduos de Manipulação são calculistas, metódicos e, em muitos casos, controladores. Eles gostam de ter tudo sob controle e possuem uma abordagem analítica e lógica.",
+    perfilPsicologico: "Pessoas desse tipo preferem influenciar as situações de forma estratégica, manipulando variáveis para atingir seus objetivos. Elas têm uma forte habilidade em observar e antecipar o comportamento dos outros.",
+    exemploPersonagem: "Shalnark, da Trupe Fantasma, que possui uma personalidade calculista e se utiliza de um método lógico em combate."
+  },
+  {
+    tipo: "Materialização",
+    nomeIngles: "Conjuration",
+    caracteristicas: "Usuários de Materialização são geralmente cautelosos, detalhistas e muito ligados a suas crenças e ideais. Eles têm um forte senso de realismo e responsabilidade e se esforçam para planejar antes de agir.",
+    perfilPsicologico: "São pessoas que valorizam a criação de soluções duráveis e concretas. Geralmente confiáveis, acreditam no valor da preparação e buscam consistência em suas escolhas e habilidades.",
+    exemploPersonagem: "Kurapika, cuja personalidade disciplinada e cuidadosa reflete sua habilidade de Materialização."
+  },
+  {
+    tipo: "Especialização",
+    nomeIngles: "Specialization",
+    caracteristicas: "Especialistas são geralmente enigmáticos, introspectivos e possuem uma certa singularidade que os diferencia. Eles são únicos e imprevisíveis, possuindo uma visão de mundo pouco convencional.",
+    perfilPsicologico: "São pessoas que caminham fora do senso comum, pensam de forma independente e estão abertas a ideias que fogem da norma. A Especialização é a categoria mais rara e associada a traços enigmáticos, muitas vezes difícil de classificar.",
+    exemploPersonagem: "Nenhum personagem específico listado."
+  }
+];
+
