@@ -21,14 +21,16 @@
         </button>
         } }
       </div>
-      <div class="py-4">
+      <div class="relative flex justify-center">
         @if (finished) {
+        <img class="brightness-50" src="assets/teste-folha-hxh.jpg" alt="Teste da Folha HunterxHunter">
         <button
           (click)="onFinish()"
-          class="bg-hxh-blue py-2 px-4 rounded-2xl text-white font-bold mt-auto disabled:opacity-50"
+          class="absolute bottom-20 bg-hxh-blue py-4 px-6 rounded-full text-white font-bold"
         >
-          RESULTADO
+          REVELAR RESULTADO
         </button>
+        <span class="absolute bottom-2 italic text-sm text-white">Reprodução: Hunter x Hunter</span>
         }
       </div>
     </div>
