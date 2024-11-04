@@ -1,44 +1,49 @@
 <main class="max-w-3xl m-4">
   <div class="bg-hxh-cream rounded-2xl shadow-2xl">
-    <div class="sm:flex gap-4">
-      <div class="relative min-w-72 h-72 mb-8">
-        <!-- <div class="relative w-72 h-72">
-          <div class="border-r-4 border-l-4 w-full h-full">
-  
-          </div>
-          <div class="border-4 w-2/4 h-3/4 rotate-45 border-r-0 border-b-0 absolute top-[-7rem] left-9">
-    
-          </div>
-          <div class="border-4 w-3/4 h-3/4 rotate-45 border-l-0 border-t-0 absolute bottom-[-7rem] left-9">
-    
-          </div>
-        </div> -->
+    <div class="gap-4 flex flex-col sm:flex-row">
+      <div class="relative flex justify-center min-w-80 min-h-80">
 
-        <div class="grid grid-cols-3 grid-rows-3 h-full font-bold">
+        <div class="relative min-w-80 min-h-80">
+          <div
+            class="absolute border-r-8 border-l-8 w-[70%] h-[35%] top-[8rem] left-12"
+          ></div>
+          <div
+            class="absolute border-r-8 border-l-8 w-[65%] h-[35%] top-[8rem] left-14 rotate-[60deg]"
+          ></div>
+          <div
+            class="absolute border-r-8 border-l-8 w-[65%] h-[35%] top-[8rem] right-14 rotate-[-60deg]"
+          ></div>
+        </div>
+
+        <span class="absolute text-xl font-semibold top-[50%]">Materialização</span>
+
+        <div
+          class="absolute max-w-80 max-h-80 w-full grid grid-cols-3 grid-rows-3 h-full font-bold top-0"
+        >
           <div></div>
           <app-nen-type
             simbol="E"
             classColor="bg-hxh-enhancement"
-            class="m-auto"
+            class="mt-auto ml-auto mr-auto"
           />
           <div></div>
 
           <app-nen-type
             simbol="T"
             classColor="bg-hxh-transmutation"
-            class="ml-auto mr-auto"
+            class="sm:ml-auto sm:mr-auto ml-auto"
           />
-          <div class="m-auto font-semibold">Materialização</div>
+          <div class="w-full"></div>
           <app-nen-type
             simbol="M"
             classColor="bg-hxh-manipulation"
-            class="ml-auto mr-auto"
+            class="sm:ml-auto sm:mr-auto"
           />
 
           <app-nen-type
             simbol="C"
             classColor="bg-hxh-conjuration"
-            class="ml-auto mr-auto"
+            class="sm:ml-auto sm:mr-auto ml-auto"
           />
           <app-nen-type
             simbol="S"
@@ -48,7 +53,7 @@
           <app-nen-type
             simbol="E"
             classColor="bg-hxh-emission"
-            class="ml-auto mr-auto"
+            class="sm:ml-auto sm:mr-auto"
           />
         </div>
       </div>
