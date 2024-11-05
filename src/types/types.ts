@@ -9,9 +9,9 @@ export interface QuizQuestionsProps {
 }
 
 export interface NenTypesProps {
-  tipo: number;
-  nomeIngles: string;
-  caracteristicas: string;
-  perfilPsicologico: string;
-  exemploPersonagem: string;
+  type: number;
+  name: string;
+  features: string;
+  psychologicalProfile: string;
+  characters: string;
 }

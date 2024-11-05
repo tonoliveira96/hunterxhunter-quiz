@@ -1,40 +1,28 @@
-<main class="max-w-3xl m-4">
+<main class="max-w-4xl m-4">
   <div class="bg-hxh-grayish-green-light rounded-3xl shadow-2xl">
     <div class="gap-4 flex flex-col sm:flex-row">
       <div class="relative flex justify-center min-w-80 min-h-80">
-        <div class="relative min-w-80 min-h-80">
-          <div
-            class="absolute border-r-8 border-l-8 w-[70%] h-[35%] top-[8rem] left-12"
-          ></div>
-          <div
-            class="absolute border-r-8 border-l-8 w-[65%] h-[35%] top-[8rem] left-14 rotate-[60deg]"
-          ></div>
-          <div
-            class="absolute border-r-8 border-l-8 w-[65%] h-[35%] top-[8rem] right-14 rotate-[-60deg]"
-          ></div>
-        </div>
+        <app-hexagon class="relative min-w-80 min-h-80"> </app-hexagon>
 
-        <span class="absolute text-2xl font-semibold top-[50%]">{{
-          nenTypeResult.nomeIngles
-        }}</span>
+        <span class="absolute text-2xl font-semibold top-[50%]">{{ nenTypeResult.name }}</span>
 
         <app-nen-diagram
           class="absolute max-w-80 max-h-80 w-full grid grid-cols-3 grid-rows-3 h-full font-bold top-0"
         ></app-nen-diagram>
       </div>
 
-      <div class="p-4 text-hxh-grayish-green-dark text-justify">
+      <div class="p-8 text-hxh-grayish-green-dark text-justify">
         <p>
           <b>Carácteristicas de Personalidade:</b>
-          {{ nenTypeResult.caracteristicas }}
+          {{ nenTypeResult.features }}
         </p>
         <p class="mt-4 text-justify">
-          <b>Perfil Psicológio:</b> {{ nenTypeResult.perfilPsicologico }}
+          <b>Perfil Psicológio:</b> {{ nenTypeResult.psychologicalProfile }}
         </p>
       </div>
     </div>
 
-    <div class="flex flex-col gap-4 p-4">
+    <div class="flex flex-col gap-4 p-8">
       <span class="font-bold text-hxh-grayish-green-dark"
         >Personagens relacionados a sua categoria de Nen:</span
       >

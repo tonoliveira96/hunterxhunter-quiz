@@ -1,9 +1,9 @@
-<main class="max-w-3xl m-4">
+<main class="max-w-4xl m-4">
   @if(!finished){
   <div class="h-4 rounded-full w-full bg-white mb-2">
     <div
       class="h-4 rounded-full bg-hxh-blue"
-      style="width: {{ surveyIndex * 10 }}%;"
+      style=`width:{{ (surveyIndex + 1) * 10 }}%;`
     ></div>
   </div>
   }
@@ -36,7 +36,8 @@
         >
           REVELAR RESULTADO
         </button>
-        <span class="absolute bottom-2 italic text-sm text-white hover:opacity-85"
+        <span
+          class="absolute bottom-2 italic text-sm text-white hover:opacity-85"
           >Reprodução: Hunter x Hunter</span
         >
         }
