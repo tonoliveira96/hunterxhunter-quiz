@@ -114,7 +114,7 @@ export const quizQuestions: QuizQuestionsProps[] = [
   }
 ];
 
-export const tiposNen: NenTypesProps[] = [
+export const nenTypeData: NenTypesProps[] = [
   {
     tipo: NenTypeEnum.ENHANCEMENT,
     nomeIngles: "Enhancement",

@@ -1,8 +1,7 @@
 <main class="max-w-3xl m-4">
-  <div class="bg-hxh-grayish-green-light rounded-2xl shadow-2xl">
+  <div class="bg-hxh-grayish-green-light rounded-3xl shadow-2xl">
     <div class="gap-4 flex flex-col sm:flex-row">
       <div class="relative flex justify-center min-w-80 min-h-80">
-
         <div class="relative min-w-80 min-h-80">
           <div
             class="absolute border-r-8 border-l-8 w-[70%] h-[35%] top-[8rem] left-12"
@@ -15,61 +14,22 @@
           ></div>
         </div>
 
-        <span class="absolute text-xl font-semibold top-[50%]">Materialização</span>
+        <span class="absolute text-2xl font-semibold top-[50%]">{{
+          nenTypeResult.nomeIngles
+        }}</span>
 
-        <div
+        <app-nen-diagram
           class="absolute max-w-80 max-h-80 w-full grid grid-cols-3 grid-rows-3 h-full font-bold top-0"
-        >
-          <div></div>
-          <app-nen-type
-            simbol="強"
-            classColor="bg-hxh-enhancement"
-            class="mt-auto ml-auto mr-auto"
-          />
-          <div></div>
-
-          <app-nen-type
-            simbol="変"
-            classColor="bg-hxh-transmutation"
-            class="sm:ml-auto sm:mr-auto ml-auto"
-          />
-          <div class="w-full"></div>
-          <app-nen-type
-            simbol="操"
-            classColor="bg-hxh-manipulation"
-            class="sm:ml-auto sm:mr-auto"
-          />
-
-          <app-nen-type
-            simbol="具"
-            classColor="bg-hxh-conjuration"
-            class="sm:ml-auto sm:mr-auto ml-auto"
-          />
-          <app-nen-type
-            simbol="特"
-            classColor="bg-hxh-specialization"
-            class="mt-auto ml-auto mr-auto"
-          />
-          <app-nen-type
-            simbol="放"
-            classColor="bg-hxh-emission"
-            class="sm:ml-auto sm:mr-auto"
-          />
-        </div>
+        ></app-nen-diagram>
       </div>
 
-      <div class="p-4 text-hxh-grayish-green-dark">
+      <div class="p-4 text-hxh-grayish-green-dark text-justify">
         <p>
-          <b>Carácteristicas de Personalidade:</b> Usuários de Materialização
-          são geralmente cautelosos, detalhistas e muito ligados a suas crenças
-          e ideais. Eles têm um forte senso de realismo e responsabilidade e se
-          esforçam para planejar antes de agir.
+          <b>Carácteristicas de Personalidade:</b>
+          {{ nenTypeResult.caracteristicas }}
         </p>
-        <p class="mt-4">
-          <b>Perfil Psicológio:</b> São pessoas que valorizam a criação de
-          soluções duráveis e concretas. Geralmente confiáveis, acreditam no
-          valor da preparação e buscam consistência em suas escolhas e
-          habilidades.
+        <p class="mt-4 text-justify">
+          <b>Perfil Psicológio:</b> {{ nenTypeResult.perfilPsicologico }}
         </p>
       </div>
     </div>
@@ -90,17 +50,22 @@
           class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
         />
         <app-character-card
-        image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
-        name="Kurapika"
-        class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
-      />
-      <app-character-card
-        image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
-        name="Kurapika"
-        class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
-      />
-      
+          image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
+          name="Kurapika"
+          class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
+        />
+        <app-character-card
+          image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
+          name="Kurapika"
+          class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
+        />
       </div>
+      <button
+        (click)="onRestart()"
+        class="ml-auto border-2 border-hxh-blue bg-white py-4 px-6 rounded-full text-hxh-blue font-bold"
+      >
+        REFAZER QUIZ
+      </button>
     </div>
   </div>
 </main>
