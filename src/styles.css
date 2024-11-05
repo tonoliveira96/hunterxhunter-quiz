@@ -9,12 +9,11 @@
 }
 
 body {
-  background: #3A8E3A;
+  background-color: #66BB6A;
   font-family: "Inter", sans-serif;
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #388E3C, #4CAF50, #81C784);
 }

@@ -1,21 +1,23 @@
 <main class="max-w-3xl m-4">
-  <div class="h-4 rounded-full w-full bg-white dark:bg-neutral-600 mb-2">
+  @if(!finished){
+  <div class="h-4 rounded-full w-full bg-white mb-2">
     <div
-      class="h-4 rounded-full bg-hxh-orange"
-      style="width: {{ (surveyIndex + 1) * 10 }}%;"
+      class="h-4 rounded-full bg-hxh-blue"
+      style="width: {{ surveyIndex * 10 }}%;"
     ></div>
   </div>
-  <div class="sm:flex gap-4 bg-hxh-cream rounded-2xl shadow-2xl">
+  }
+  <div class="sm:flex gap-4 bg-hxh-grayish-green-light rounded-2xl shadow-2xl">
     <div class="w-full flex flex-col p-4">
       <div>
         @if(!finished){
-        <app-question
-          question="{{ surveyIndex + 1 }}. {{ currentQuestion.question }}"
-        />
+        <span class="font-bold text-2xl text-hxh-dark-blue"
+          >{{ surveyIndex + 1 }}. {{ currentQuestion.question }}</span
+        >
         @for (item of currentQuestion.options; track $index) {
         <button
           (click)="onSelectAnswer(item.type)"
-          class="w-full mt-2 text-hxh-dark-blue text-left bg-white rounded-2xl px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white active:bg-hxh-blue"
+          class="w-full mt-2 text-hxh-grayish-green-dark text-left border-[1px] border-hxh-grayish-green-dark bg-white rounded-full px-4 py-2 shadow-md hover:bg-hxh-blue hover:text-white hover:border-hxh-blue active:bg-hxh-blue"
         >
           {{ item.answer }}
         </button>
@@ -23,14 +25,20 @@
       </div>
       <div class="relative flex justify-center">
         @if (finished) {
-        <img class="brightness-50" src="assets/teste-folha-hxh.jpg" alt="Teste da Folha HunterxHunter">
+        <img
+          class="brightness-50"
+          src="assets/teste-folha-hxh.jpg"
+          alt="Teste da Folha HunterxHunter"
+        />
         <button
           (click)="onFinish()"
           class="absolute bottom-20 bg-hxh-blue py-4 px-6 rounded-full text-white font-bold"
         >
           REVELAR RESULTADO
         </button>
-        <span class="absolute bottom-2 italic text-sm text-white">Reprodução: Hunter x Hunter</span>
+        <span class="absolute bottom-2 italic text-sm text-white"
+          >Reprodução: Hunter x Hunter</span
+        >
         }
       </div>
     </div>

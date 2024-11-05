@@ -3,13 +3,11 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { quizQuestions } from '../../../data/quiz';
 import { QuizQuestionsProps } from '../../../types/types';
-import { QuestionComponent } from '../../components/question/question.component';
-
 
 @Component({
   selector: 'app-survey',
   standalone: true,
-  imports: [QuestionComponent, CommonModule],
+  imports: [CommonModule],
   templateUrl: './survey.component.html',
 })
 export class SurveyComponent implements OnInit {
@@ -59,6 +57,7 @@ export class SurveyComponent implements OnInit {
     });
     console.log(this.answers)
     console.log(result)
+    this.route.navigate(['result'])
     return result;
   }
 }

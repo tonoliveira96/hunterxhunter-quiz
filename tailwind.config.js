@@ -1,25 +1,22 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./src/**/*.{html,ts}",
-  ],
+  content: ["./src/**/*.{html,ts}"],
   theme: {
-    colors:{
-      'hxh-green': '#3A8E3A',
-      'hxh-blue': '#3C5AA6',
-      'hxh-dark-blue': '#2C3E5F',
-      'hxh-cream': '#F5E3C8',
-      'hxh-yellow': '#FFD54F',
-      'hxh-orange': '#DB6429',
-      'white': '#FFFFFF',
-      'hxh-enhancement': '#59c52d',
-      'hxh-transmutation': '#d87be9',
-      'hxh-conjuration': '#ff4945',
-      'hxh-specialization': '#35b0f0',
-      'hxh-manipulation': '#999999',
-      'hxh-emission': '#ffdb43',
-    }
+    colors: {
+      "hxh-green": "#66BB6A",
+      "hxh-blue": "#2A73CC",
+      "hxh-yellow": "#FFD54F",
+      "hxh-orange": "#DB6429",
+      "hxh-grayish-green-light": "#F5F8F2",
+      "hxh-grayish-green-dark": "#2F4F4F",
+      white: "#FFFFFF",
+      "hxh-enhancement": "#028002",
+      "hxh-transmutation": "#b800c4",
+      "hxh-conjuration": "#d9011e",
+      "hxh-specialization": "#026eb9",
+      "hxh-manipulation": "#c1c1c1",
+      "hxh-emission": "#e6bc00",
+    },
   },
   plugins: [],
-}
-
+};
