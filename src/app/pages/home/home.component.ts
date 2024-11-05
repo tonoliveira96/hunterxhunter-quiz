@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -7,14 +7,11 @@ import { Router } from '@angular/router';
   imports: [],
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
   private route = inject(Router);
 
   onStart() {
     this.route.navigate(['/survey']);
   }
 
-  ngOnInit(): void {
-    localStorage.clear();
-  }
 }

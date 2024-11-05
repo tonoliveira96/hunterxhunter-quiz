@@ -2,12 +2,12 @@
   @if(!finished){
   <div class="h-4 rounded-full w-full bg-white mb-2">
     <div
-      class="h-4 rounded-full bg-hxh-blue"
-      style=`width:{{ (surveyIndex + 1) * 10 }}%;`
+      class="h-4 rounded-full bg-hxh-blue w-[{{((surveyIndex + 1) * 10)}}]"
+      style="{{ 'width:' + (surveyIndex + 1) * 10 + '%;' }}"
     ></div>
   </div>
   }
-  <div class="sm:flex gap-4 bg-hxh-grayish-green-light rounded-3xl shadow-2xl">
+  <div class="sm:flex gap-4 bg-hxh-grayish-green-light rounded-3xl shadow-xl">
     <div class="w-full flex flex-col p-4">
       <div>
         @if(!finished){
