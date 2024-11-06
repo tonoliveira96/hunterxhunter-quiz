@@ -8,6 +8,11 @@ import { Component, Input } from '@angular/core';
 })
 export class NenTypeComponent {
   @Input() simbol!: string;
+
   @Input() classColor!: string;
   @Input() classPosition!: string;
+  @Input() classAnimation!: string;
+
+  @Input() description!: string;
+  @Input() classDescription!: string;
 }

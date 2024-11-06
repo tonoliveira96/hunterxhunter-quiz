@@ -4,10 +4,13 @@
       <div class="relative flex justify-center min-w-80 min-h-80">
         <app-hexagon class="relative min-w-80 min-h-80"> </app-hexagon>
 
-        <span class="absolute text-2xl font-semibold top-[50%]">{{ nenTypeResult.name }}</span>
+        <span class="absolute text-2xl font-semibold top-[50%]">{{
+          nenTypeResult.name
+        }}</span>
 
         <app-nen-diagram
           class="absolute max-w-80 max-h-80 w-full grid grid-cols-3 grid-rows-3 h-full font-bold top-0"
+          type="{{ nenTypeResult.type.toString() }}"
         ></app-nen-diagram>
       </div>
 
@@ -22,33 +25,21 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-4 p-8">
+    <div class="flex flex-col gap-4 p-8 mt-4">
       <span class="font-bold text-hxh-grayish-green-dark"
         >Personagens relacionados a sua categoria de Nen:</span
       >
       <div class="flex gap-4 overflow-x-auto">
-        <app-character-card
-          image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
-          name="Kurapika Kurapika kurapika"
-          class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
-        />
-        <app-character-card
-          image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
-          name="Kurapika"
-          class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
-        />
-        <app-character-card
-          image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
-          name="Kurapika"
-          class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
-        />
-        <app-character-card
-          image_url="https://res.cloudinary.com/erro/image/upload/v1692803962/hxh_api_oop/irpjqgbrrcgnqu1upwiz.webp"
-          name="Kurapika"
-          class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-blue"
-        />
+        @if (relatedCharacters) { 
+          @for (character of relatedCharacters; track $index) {
+            <app-character-card
+              image_url="{{character.image_path}}"
+              name="{{character.name}}"
+              class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-grayish-green-dark"
+            />
+        } }
       </div>
-      <button (click)="onRestart()" class="ml-auto btn-secondary" >
+      <button (click)="onRestart()" class="ml-auto btn-secondary">
         REFAZER QUIZ
       </button>
     </div>

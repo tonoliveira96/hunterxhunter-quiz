@@ -3,9 +3,19 @@
     classColor
   }} {{ classPosition }}"
 >
+  @if (classAnimation) {
+  <span
+    class="{{
+      classAnimation
+    }} absolute inline-flex h-full w-full rounded-full {{
+      classColor
+    }} opacity-75"
+  ></span>
+  }
   {{ simbol }}
-  <!-- <span
-    class="absolute w-20 text-sm font-normal text-center right-[-1rem] top-[-3rem]"
-    >Cria objetos com aura</span
-  > -->
+  <!-- @if (description) {
+    <span class="absolute w-20 text-xs font-normal text-center right-[-1rem] {{ classDescription }}">
+      {{ description }}
+    </span>
+  } -->
 </div>

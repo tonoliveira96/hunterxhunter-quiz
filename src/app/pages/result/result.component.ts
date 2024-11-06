@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { nenTypeData } from '../../../data/quiz';
-import { NenTypesProps } from '../../../types/types';
+import { charactersData, nenTypeData } from '../../../data/quiz';
+import { CharactersDataProps, NenTypesProps } from '../../../types/types';
 import { CharacterCardComponent } from "../../components/character-card/character-card.component";
 import { HexagonComponent } from '../../components/hexagon/hexagon.component';
 import { NenDiagramComponent } from '../../components/nen-diagram/nen-diagram.component';
@@ -16,6 +16,7 @@ export class ResultComponent implements OnInit {
   private route = inject(Router);
 
   nenTypeResult!: NenTypesProps;
+  relatedCharacters!: CharactersDataProps[];
 
   ngOnInit(): void {
     var result = localStorage.getItem("@hxhquiz:");
@@ -24,6 +25,11 @@ export class ResultComponent implements OnInit {
       var nenCategory = nenTypeData.find(nen => nen.type.toString() === result);
       if (nenCategory) {
         this.nenTypeResult = nenCategory;
+
+        var characters = charactersData.filter(character => character.type.toString() === result);
+        if (characters) {
+          this.relatedCharacters = characters;
+        }
       }
     }
   }

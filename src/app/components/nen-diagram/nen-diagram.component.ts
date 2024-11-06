@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { NenTypeComponent } from '../nen-type/nen-type.component';
 
 @Component({
@@ -8,5 +8,5 @@ import { NenTypeComponent } from '../nen-type/nen-type.component';
   templateUrl: './nen-diagram.component.html',
 })
 export class NenDiagramComponent {
-
+  @Input() type!: string;
 }

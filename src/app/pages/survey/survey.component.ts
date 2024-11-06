@@ -55,8 +55,7 @@ export class SurveyComponent implements OnInit {
         return current;
       }
     });
-    console.log(this.answers)
-    console.log(result)
+
     localStorage.setItem("@hxhquiz:", result.toString())
     this.route.navigate(['result'])
   }

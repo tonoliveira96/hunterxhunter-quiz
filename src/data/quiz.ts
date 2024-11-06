@@ -1,5 +1,5 @@
 ﻿import { NenTypeEnum } from '../types/enums';
-import { NenTypesProps, QuizQuestionsProps } from '../types/types';
+import { CharactersDataProps, NenTypesProps, QuizQuestionsProps } from '../types/types';
 
 export const quizQuestions: QuizQuestionsProps[] = [
   {
@@ -159,3 +159,35 @@ export const nenTypeData: NenTypesProps[] = [
   }
 ];
 
+export const charactersData: CharactersDataProps[] = [
+  {
+    type: NenTypeEnum.TRANSMUTATION,
+    name: "Killua Zoldyck",
+    image_path: 'assets/characters/killua-zoldyck.png'
+  },
+  {
+    type: NenTypeEnum.ENHANCEMENT,
+    name: "Gon Freecss",
+    image_path: "assets/characters/gon-freecss.png"
+  },
+  {
+    type: NenTypeEnum.EMISSION,
+    name: "Leorio Paradinight",
+    image_path: "assets/characters/leorio-paradinight.png"
+  },
+  {
+    type: NenTypeEnum.CONJURATION,
+    name: "Kurapika",
+    image_path: "assets/characters/kurapika.png"
+  },
+  {
+    type: NenTypeEnum.CONJURATION,
+    name: "Kaito",
+    image_path: "assets/characters/kaito.png"
+  },
+  {
+    type: NenTypeEnum.ENHANCEMENT,
+    name: "Uvogin",
+    image_path: "assets/characters/uvogin.png"
+  }
+];

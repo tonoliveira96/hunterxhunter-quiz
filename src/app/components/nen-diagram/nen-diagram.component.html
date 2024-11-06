@@ -3,33 +3,50 @@
   simbol="強"
   classColor="bg-hxh-enhancement"
   class="mt-auto ml-auto mr-auto"
+  classAnimation="{{ type == '0' ? 'animate-ping' : '' }}"
+  description="Fortalece eles mesmos ou objetos"
+  classDescription="top-[-3rem]"
 />
 <div></div>
 <!--  -->
 <app-nen-type
+  simbol="放"
+  classColor="bg-hxh-emission"
+  class="sm:ml-auto sm:mr-auto"
+  description="Desprende a aura do corpo"
+  classDescription="top-[-3rem]"
+/>
+<div class="w-full"></div>
+<app-nen-type
   simbol="変"
   classColor="bg-hxh-transmutation"
   class="sm:ml-auto sm:mr-auto ml-auto"
+  classAnimation="{{ type == '1' ? 'animate-ping' : '' }}"
+  description="Muda os atributos da aura para combinar com outras coisas"
+  classDescription="top-[-3rem]"
 />
-<div class="w-full"></div>
+<!--  -->
 <app-nen-type
   simbol="操"
   classColor="bg-hxh-manipulation"
   class="sm:ml-auto sm:mr-auto"
-/>
-<!--  -->
-<app-nen-type
-  simbol="具"
-  classColor="bg-hxh-conjuration"
-  class="sm:ml-auto sm:mr-auto ml-auto"
+  classAnimation="{{ type == '3' ? 'animate-ping' : '' }}"
+  description="Controla coisas animadas e inanimadas"
+  classDescription="top-[3rem]"
 />
 <app-nen-type
   simbol="特"
   classColor="bg-hxh-specialization"
   class="mt-auto ml-auto mr-auto"
+  classAnimation="{{ type == '5' ? 'animate-ping' : '' }}"
+  description="habilidade única"
+  classDescription="top-[3rem]"
 />
 <app-nen-type
-  simbol="放"
-  classColor="bg-hxh-emission"
-  class="sm:ml-auto sm:mr-auto"
+  simbol="具"
+  classColor="bg-hxh-conjuration"
+  class="sm:ml-auto sm:mr-auto ml-auto"
+  classAnimation="{{ type == '2' ? 'animate-ping' : '' }}"
+  description="Cria objetos com aura"
+  classDescription="top-[3rem]"
 />
