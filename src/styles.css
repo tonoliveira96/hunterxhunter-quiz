@@ -4,10 +4,16 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-hxh-blue p-4 rounded-full text-white text-center font-bold mt-auto hover:brightness-100;
+    @apply bg-hxh-blue py-2 px-4 rounded-full text-white text-center font-bold mt-auto hover:brightness-100;
   }
   .btn-secondary {
-    @apply border-2 border-hxh-blue bg-white py-4 px-6 rounded-full text-hxh-blue font-bold hover:bg-hxh-blue hover:text-white;
+    @apply border-2 border-hxh-blue bg-white py-1 px-2 rounded-full text-hxh-blue font-bold hover:bg-hxh-blue hover:text-white;
+  }
+  .tooltip {
+    @apply invisible absolute;
+  } 
+  .has-tooltip:hover .tooltip {
+    @apply visible z-50;
   }
 }
 

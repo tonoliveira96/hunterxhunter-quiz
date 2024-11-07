@@ -1,21 +1,22 @@
 <div
-  class="relative w-12 h-12 rounded-full border-4 flex items-center justify-center {{
+  class="relative has-tooltip w-12 h-12 rounded-full border-4 flex items-center justify-center {{
     classColor
   }} {{ classPosition }}"
 >
   @if (classAnimation) {
-  <span
-    class="{{
-      classAnimation
-    }} absolute inline-flex h-full w-full rounded-full {{
-      classColor
-    }} opacity-75"
-  ></span>
+    <span
+      class="{{
+        classAnimation
+      }} absolute inline-flex h-full w-full rounded-full {{
+        classColor
+      }} opacity-75"
+    ></span>
   }
   {{ simbol }}
-  <!-- @if (description) {
-    <span class="absolute w-20 text-xs font-normal text-center right-[-1rem] {{ classDescription }}">
+  @if (description) {
+    <span class="tooltip w-24 rounded shadow-lg p-1 bg-white text-hxh-grayish-green-dark text-center text-xs font-normal {{ classDescription }}">
+      <span class="font-semibold">{{ title }}</span>
       {{ description }}
     </span>
-  } -->
+  }
 </div>

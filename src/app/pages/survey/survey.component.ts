@@ -19,8 +19,8 @@ export class SurveyComponent implements OnInit {
   surveyIndex: number = 0;
   totalQuestions: number = 0;
 
-  answers: number[] = [];
-  currentAnswer: number | null = null;
+  answers: string[] = [];
+  currentAnswer: string = "";
 
   finished: boolean = false;
 
@@ -31,7 +31,7 @@ export class SurveyComponent implements OnInit {
     }
   }
 
-  onSelectAnswer(nenType: number) {
+  onSelectAnswer(nenType: string) {
     this.currentAnswer = nenType;
     this.onContinue();
   }
@@ -40,7 +40,7 @@ export class SurveyComponent implements OnInit {
     this.surveyIndex += 1;
 
     if (this.totalQuestions > this.surveyIndex) {
-      if (this.currentAnswer) this.answers.push(this.currentAnswer);
+      if (this.currentAnswer) this.answers.push(this.currentAnswer.toString());
       this.currentQuestion = quizQuestions[this.surveyIndex];
     } else {
       this.finished = true;
@@ -56,7 +56,10 @@ export class SurveyComponent implements OnInit {
       }
     });
 
-    localStorage.setItem("@hxhquiz:", result.toString())
+    if(result){
+      localStorage.setItem("@hxhquiz:", result.toString())
+    }
+
     this.route.navigate(['result'])
   }
 }

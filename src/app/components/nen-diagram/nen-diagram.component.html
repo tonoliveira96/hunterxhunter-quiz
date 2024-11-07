@@ -4,8 +4,9 @@
   classColor="bg-hxh-enhancement"
   class="mt-auto ml-auto mr-auto"
   classAnimation="{{ type == '0' ? 'animate-ping' : '' }}"
-  description="Fortalece eles mesmos ou objetos"
-  classDescription="top-[-3rem]"
+  description="Fortalece eles mesmos ou objetos."
+  classDescription="-top-[3rem]"
+  title="Reforço"
 />
 <div></div>
 <!--  -->
@@ -13,8 +14,10 @@
   simbol="放"
   classColor="bg-hxh-emission"
   class="sm:ml-auto sm:mr-auto"
-  description="Desprende a aura do corpo"
-  classDescription="top-[-3rem]"
+  classAnimation="{{ type == '4' ? 'animate-ping' : '' }}"
+  description="Desprende a aura do corpo."
+  classDescription="-top-[3rem]"
+  title="Emissão"
 />
 <div class="w-full"></div>
 <app-nen-type
@@ -22,8 +25,9 @@
   classColor="bg-hxh-transmutation"
   class="sm:ml-auto sm:mr-auto ml-auto"
   classAnimation="{{ type == '1' ? 'animate-ping' : '' }}"
-  description="Muda os atributos da aura para combinar com outras coisas"
-  classDescription="top-[-3rem]"
+  description="Muda os atributos da aura para combinar com outras coisas."
+  classDescription="-top-[3rem]"
+  title="Transformação"
 />
 <!--  -->
 <app-nen-type
@@ -31,22 +35,25 @@
   classColor="bg-hxh-manipulation"
   class="sm:ml-auto sm:mr-auto"
   classAnimation="{{ type == '3' ? 'animate-ping' : '' }}"
-  description="Controla coisas animadas e inanimadas"
+  description="Controla coisas animadas e inanimadas."
   classDescription="top-[3rem]"
+  title="Manipulação"
 />
 <app-nen-type
   simbol="特"
   classColor="bg-hxh-specialization"
   class="mt-auto ml-auto mr-auto"
   classAnimation="{{ type == '5' ? 'animate-ping' : '' }}"
-  description="habilidade única"
+  description="Habilidade única."
   classDescription="top-[3rem]"
+  title="Especializaçao"
 />
 <app-nen-type
   simbol="具"
   classColor="bg-hxh-conjuration"
   class="sm:ml-auto sm:mr-auto ml-auto"
   classAnimation="{{ type == '2' ? 'animate-ping' : '' }}"
-  description="Cria objetos com aura"
+  description="Cria objetos com aura."
   classDescription="top-[3rem]"
+  title="Materialização"
 />

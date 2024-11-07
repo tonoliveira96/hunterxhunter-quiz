@@ -15,4 +15,5 @@ export class NenTypeComponent {
 
   @Input() description!: string;
   @Input() classDescription!: string;
+  @Input() title!: string;
 }
