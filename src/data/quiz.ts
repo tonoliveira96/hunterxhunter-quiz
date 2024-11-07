@@ -40,16 +40,13 @@ export const quizQuestions: QuizQuestionsProps[] = [
     question: 'Em uma situação social, como você normalmente se comporta?',
     options: [
       {
+        answer:
+          'Prefiro observar e interagir quando vejo algo realmente interessante.',
+        type: NenTypeEnum.SPECIALIZATION,
+      },
+      {
         answer: 'Sou extrovertido(a) e gosto de fazer as pessoas rirem.',
         type: NenTypeEnum.ENHANCEMENT,
-      },
-      {
-        answer: 'Sou mais reservado(a) e observo os outros antes de interagir.',
-        type: NenTypeEnum.CONJURATION,
-      },
-      {
-        answer: 'Sou imprevisível e gosto de surpreender as pessoas.',
-        type: NenTypeEnum.TRANSMUTATION,
       },
       {
         answer: 'Gosto de controlar a dinâmica e direcionar a conversa.',
@@ -60,9 +57,12 @@ export const quizQuestions: QuizQuestionsProps[] = [
         type: NenTypeEnum.EMISSION,
       },
       {
-        answer:
-          'Prefiro observar e interagir quando vejo algo realmente interessante.',
-        type: NenTypeEnum.SPECIALIZATION,
+        answer: 'Sou mais reservado(a) e observo os outros antes de interagir.',
+        type: NenTypeEnum.CONJURATION,
+      },
+      {
+        answer: 'Sou imprevisível e gosto de surpreender as pessoas.',
+        type: NenTypeEnum.TRANSMUTATION,
       },
     ],
   },
@@ -70,8 +70,12 @@ export const quizQuestions: QuizQuestionsProps[] = [
     question: 'Quando alguém te ofende, qual é a sua reação inicial?',
     options: [
       {
-        answer: 'Deixo claro o que sinto e resolvo o problema diretamente.',
-        type: NenTypeEnum.ENHANCEMENT,
+        answer: 'Reajo de imediato, às vezes de forma enérgica.',
+        type: NenTypeEnum.EMISSION,
+      },
+      {
+        answer: 'Deixo passar, mas analiso cuidadosamente o comportamento.',
+        type: NenTypeEnum.SPECIALIZATION,
       },
       {
         answer: 'Tento entender a razão do conflito antes de reagir.',
@@ -86,35 +90,31 @@ export const quizQuestions: QuizQuestionsProps[] = [
         type: NenTypeEnum.MANIPULATION,
       },
       {
-        answer: 'Reajo de imediato, às vezes de forma enérgica.',
-        type: NenTypeEnum.EMISSION,
-      },
-      {
-        answer: 'Deixo passar, mas analiso cuidadosamente o comportamento.',
-        type: NenTypeEnum.SPECIALIZATION,
-      },
+        answer: 'Deixo claro o que sinto e resolvo o problema diretamente.',
+        type: NenTypeEnum.ENHANCEMENT,
+      }
     ],
   },
   {
     question: 'Qual das descrições melhor define seu estilo de vida?',
     options: [
+      {
+        answer: 'Controle e manipulação dos recursos à disposição.',
+        type: NenTypeEnum.MANIPULATION,
+      },
       { answer: 'Ação e movimento constantes.', type: NenTypeEnum.ENHANCEMENT },
+      { answer: 'Intensidade e expressividade.', type: NenTypeEnum.EMISSION },
       {
         answer: 'Planejamento e atenção aos detalhes.',
         type: NenTypeEnum.CONJURATION,
       },
       {
-        answer: 'Adaptabilidade e liberdade.',
-        type: NenTypeEnum.TRANSMUTATION,
-      },
-      {
-        answer: 'Controle e manipulação dos recursos à disposição.',
-        type: NenTypeEnum.MANIPULATION,
-      },
-      { answer: 'Intensidade e expressividade.', type: NenTypeEnum.EMISSION },
-      {
         answer: 'Singularidade e introspecção.',
         type: NenTypeEnum.SPECIALIZATION,
+      },
+      {
+        answer: 'Adaptabilidade e liberdade.',
+        type: NenTypeEnum.TRANSMUTATION,
       },
     ],
   },
@@ -122,8 +122,8 @@ export const quizQuestions: QuizQuestionsProps[] = [
     question: 'Como você lida com um projeto de longo prazo?',
     options: [
       {
-        answer: 'Mantenho uma abordagem prática e direta, sem complicar.',
-        type: NenTypeEnum.ENHANCEMENT,
+        answer: 'Tento antecipar problemas e manipulá-los a meu favor.',
+        type: NenTypeEnum.MANIPULATION,
       },
       {
         answer: 'Planejo tudo e sigo cada etapa com cuidado.',
@@ -134,8 +134,8 @@ export const quizQuestions: QuizQuestionsProps[] = [
         type: NenTypeEnum.TRANSMUTATION,
       },
       {
-        answer: 'Tento antecipar problemas e manipulá-los a meu favor.',
-        type: NenTypeEnum.MANIPULATION,
+        answer: 'Mantenho uma abordagem prática e direta, sem complicar.',
+        type: NenTypeEnum.ENHANCEMENT,
       },
       {
         answer: 'Trabalho em rajadas intensas e depois dou pausas.',
@@ -150,8 +150,6 @@ export const quizQuestions: QuizQuestionsProps[] = [
   {
     question: 'Qual dos seguintes atributos é mais importante para você?',
     options: [
-      { answer: 'Força e persistência.', type: NenTypeEnum.ENHANCEMENT },
-      { answer: 'Cautela e preparação.', type: NenTypeEnum.CONJURATION },
       {
         answer: 'Versatilidade e criatividade.',
         type: NenTypeEnum.TRANSMUTATION,
@@ -162,28 +160,14 @@ export const quizQuestions: QuizQuestionsProps[] = [
       },
       { answer: 'Expressão e intensidade.', type: NenTypeEnum.EMISSION },
       { answer: 'Originalidade e mistério.', type: NenTypeEnum.SPECIALIZATION },
+      { answer: 'Força e persistência.', type: NenTypeEnum.ENHANCEMENT },
+      { answer: 'Cautela e preparação.', type: NenTypeEnum.CONJURATION },
     ],
   },
   {
     question:
       'Como você costuma resolver problemas no trabalho ou nos estudos?',
     options: [
-      {
-        answer: 'Encaro os problemas diretamente, com força e determinação.',
-        type: NenTypeEnum.ENHANCEMENT,
-      },
-      {
-        answer: 'Planejo cuidadosamente e tento resolver cada detalhe.',
-        type: NenTypeEnum.CONJURATION,
-      },
-      {
-        answer: 'Busco alternativas criativas e imprevisíveis.',
-        type: NenTypeEnum.TRANSMUTATION,
-      },
-      {
-        answer: 'Uso minha capacidade de influência para guiar as coisas.',
-        type: NenTypeEnum.MANIPULATION,
-      },
       {
         answer: 'Reajo de forma rápida e intensa para resolver o problema.',
         type: NenTypeEnum.EMISSION,
@@ -192,22 +176,38 @@ export const quizQuestions: QuizQuestionsProps[] = [
         answer: 'Tento abordar a situação de uma maneira única e original.',
         type: NenTypeEnum.SPECIALIZATION,
       },
+      {
+        answer: 'Encaro os problemas diretamente, com força e determinação.',
+        type: NenTypeEnum.ENHANCEMENT,
+      },   
+      {
+        answer: 'Uso minha capacidade de influência para guiar as coisas.',
+        type: NenTypeEnum.MANIPULATION,
+      },    
+      {
+        answer: 'Planejo cuidadosamente e tento resolver cada detalhe.',
+        type: NenTypeEnum.CONJURATION,
+      },
+      {
+        answer: 'Busco alternativas criativas e imprevisíveis.',
+        type: NenTypeEnum.TRANSMUTATION,
+      },
     ],
   },
   {
     question: 'Como as pessoas costumam te descrever?',
     options: [
+      {
+        answer: 'Controlador(a) e estratégico(a).',
+        type: NenTypeEnum.MANIPULATION,
+      },
+      { answer: 'Intenso(a) e expressivo(a).', type: NenTypeEnum.EMISSION },
       { answer: 'Energético(a) e direto(a).', type: NenTypeEnum.ENHANCEMENT },
       { answer: 'Detalhista e confiável.', type: NenTypeEnum.CONJURATION },
       {
         answer: 'Engraçado(a) e imprevisível.',
         type: NenTypeEnum.TRANSMUTATION,
       },
-      {
-        answer: 'Controlador(a) e estratégico(a).',
-        type: NenTypeEnum.MANIPULATION,
-      },
-      { answer: 'Intenso(a) e expressivo(a).', type: NenTypeEnum.EMISSION },
       {
         answer: 'Misterioso(a) e introspectivo(a).',
         type: NenTypeEnum.SPECIALIZATION,
@@ -218,20 +218,20 @@ export const quizQuestions: QuizQuestionsProps[] = [
     question: 'Quando precisa aprender uma nova habilidade, como você faz?',
     options: [
       {
-        answer: 'Pratico até dominar, sem atalhos.',
-        type: NenTypeEnum.ENHANCEMENT,
-      },
-      {
-        answer: 'Estudo e planejo antes de tentar.',
-        type: NenTypeEnum.CONJURATION,
-      },
-      {
         answer: 'Tento adaptar a habilidade ao meu estilo pessoal.',
         type: NenTypeEnum.TRANSMUTATION,
       },
       {
         answer: 'Procuro entender os aspectos que me dão mais controle.',
         type: NenTypeEnum.MANIPULATION,
+      },
+      {
+        answer: 'Pratico até dominar, sem atalhos.',
+        type: NenTypeEnum.ENHANCEMENT,
+      },
+      {
+        answer: 'Estudo e planejo antes de tentar.',
+        type: NenTypeEnum.CONJURATION,
       },
       {
         answer: 'Vou direto ao ponto e aprendo praticando rapidamente.',
@@ -246,6 +246,14 @@ export const quizQuestions: QuizQuestionsProps[] = [
   {
     question: 'Como você lida com a pressão em situações extremas?',
     options: [
+      {
+        answer: 'Reajo de maneira intensa e rápida, seguindo meu instinto.',
+        type: NenTypeEnum.EMISSION,
+      },
+      {
+        answer: 'Mantenho uma abordagem única, seguindo minha intuição.',
+        type: NenTypeEnum.SPECIALIZATION,
+      },
       {
         answer: 'Enfrento a situação com força e coragem.',
         type: NenTypeEnum.ENHANCEMENT,
@@ -262,14 +270,6 @@ export const quizQuestions: QuizQuestionsProps[] = [
         answer:
           'Tento manipular as variáveis para tornar a situação mais favorável.',
         type: NenTypeEnum.MANIPULATION,
-      },
-      {
-        answer: 'Reajo de maneira intensa e rápida, seguindo meu instinto.',
-        type: NenTypeEnum.EMISSION,
-      },
-      {
-        answer: 'Mantenho uma abordagem única, seguindo minha intuição.',
-        type: NenTypeEnum.SPECIALIZATION,
       },
     ],
   },
@@ -394,8 +394,38 @@ export const charactersData: CharactersDataProps[] = [
     image_path: 'assets/characters/silva-zoldyck.png',
   },
   {
+    type: NenTypeEnum.EMISSION,
+    name: 'Zeno Zoldyck',
+    image_path: 'assets/characters/zeno-zoldyck.png',
+  },
+  {
     type: NenTypeEnum.MANIPULATION,
     name: 'Shalnark',
     image_path: 'assets/characters/shalnark.png',
+  },
+  {
+    type: NenTypeEnum.TRANSMUTATION,
+    name: 'Biscuit Krueger',
+    image_path: 'assets/characters/biscuit-krueger.png',
+  },
+  {
+    type: NenTypeEnum.SPECIALIZATION,
+    name: 'Neferpitou',
+    image_path: 'assets/characters/neferpitou.png',
+  },
+  {
+    type: NenTypeEnum.MANIPULATION,
+    name: 'Shaiapouf',
+    image_path: 'assets/characters/shaiapouf.png',
+  },
+  {
+    type: NenTypeEnum.ENHANCEMENT,
+    name: 'Isaac Netero',
+    image_path: 'assets/characters/isaac-netero.png',
+  },
+  {
+    type: NenTypeEnum.CONJURATION,
+    name: 'Shizuku',
+    image_path: 'assets/characters/shizuku.png',
   },
 ];

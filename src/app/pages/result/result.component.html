@@ -29,7 +29,7 @@
       <span class="font-bold text-hxh-grayish-green-dark"
         >Personagens relacionados a sua categoria de Nen:</span
       >
-      <div class="flex gap-4 overflow-x-auto">
+      <div class="flex gap-4 overflow-auto">
         @if (relatedCharacters) { 
           @for (character of relatedCharacters; track $index) {
             <app-character-card
