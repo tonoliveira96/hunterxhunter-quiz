@@ -428,4 +428,34 @@ export const charactersData: CharactersDataProps[] = [
     name: 'Shizuku',
     image_path: 'assets/characters/shizuku.png',
   },
+  {
+    type: NenTypeEnum.SPECIALIZATION,
+    name: 'Neon Nostrade',
+    image_path: 'assets/characters/neon-nostrade.png',
+  },
+  {
+    type: NenTypeEnum.CONJURATION,
+    name: 'Koltopi',
+    image_path: 'assets/characters/koltopi.png',
+  },
+  {
+    type: NenTypeEnum.ENHANCEMENT,
+    name: 'Wing',
+    image_path: 'assets/characters/wing.png',
+  },
+  {
+    type: NenTypeEnum.MANIPULATION,
+    name: 'Morel Mackernasey',
+    image_path: 'assets/characters/morel-mackernasey.png',
+  },
+  {
+    type: NenTypeEnum.EMISSION,
+    name: 'Franklin Bordeau',
+    image_path: 'assets/characters/franklin-bordeau.png',
+  },
+  {
+    type: NenTypeEnum.TRANSMUTATION,
+    name: 'Machi',
+    image_path: 'assets/characters/machi.png',
+  },
 ];

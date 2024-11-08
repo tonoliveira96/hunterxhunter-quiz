@@ -25,17 +25,17 @@
       </div>
     </div>
 
-    <div class="flex flex-col gap-4 p-8 mt-4">
+    <div class="flex flex-col gap-4 p-8 mt-4 overflow-auto">
       <span class="font-bold text-hxh-grayish-green-dark"
         >Personagens relacionados a sua categoria de Nen:</span
       >
-      <div class="flex gap-4 overflow-auto">
+      <div class="flex gap-4">
         @if (relatedCharacters) { 
           @for (character of relatedCharacters; track $index) {
             <app-character-card
               image_url="{{ character.image_path }}"
               name="{{ character.name }}"
-              class="relative h-52 w-32 bg-white rounded-md shadow-2xl hover:opacity-85 border-4 border-hxh-grayish-green-dark"
+              class="relative h-52 w-32 bg-white rounded-md shadow-2xl border-4 border-hxh-grayish-green-dark hover:brightness-75"
             />
         } }
       </div>

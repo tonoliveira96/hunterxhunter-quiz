@@ -3,7 +3,9 @@ import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { quizQuestions } from '../../../data/quiz';
 import { QuizQuestionsProps } from '../../../types/types';
+import { getNenTypeName } from '../../../utils/nen';
 
+declare let gtag: Function;
 @Component({
   selector: 'app-survey',
   standalone: true,
@@ -12,7 +14,7 @@ import { QuizQuestionsProps } from '../../../types/types';
 })
 export class SurveyComponent implements OnInit {
   private route = inject(Router);
-  
+
   questions: QuizQuestionsProps = {} as QuizQuestionsProps;
   currentQuestion: QuizQuestionsProps = {} as QuizQuestionsProps;
 
@@ -56,10 +58,19 @@ export class SurveyComponent implements OnInit {
       }
     });
 
-    if(result){
-      localStorage.setItem("@hxhquiz:", result.toString())
+    if (result) {
+      localStorage.setItem("@hxhquiz:", result.toString());
+
+      let nenType = getNenTypeName(Number(result));
+      this.trackButtonClick(nenType);
     }
 
-    this.route.navigate(['result'])
+    this.route.navigate(['result']);
+  }
+
+  trackButtonClick(value: string) {
+    gtag('event', 'finish_quiz', {
+      value: value
+    });
   }
 }
