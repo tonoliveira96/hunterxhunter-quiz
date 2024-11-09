@@ -6,12 +6,15 @@
   .btn-primary {
     @apply bg-hxh-blue py-2 px-4 rounded-full text-white text-center font-bold mt-auto hover:brightness-100;
   }
+
   .btn-secondary {
     @apply border-2 border-hxh-blue bg-white py-1 px-2 rounded-full text-hxh-blue font-bold hover:bg-hxh-blue hover:text-white;
   }
+
   .tooltip {
     @apply invisible absolute;
-  } 
+  }
+
   .has-tooltip:hover .tooltip {
     @apply visible z-50;
   }
@@ -24,10 +27,13 @@
 }
 
 body {
-  background-color: #66BB6A;
+  /* background-color: #66BB6A; */
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  background: linear-gradient(135deg, hsla(123, 38%, 57%, 1) 0%, hsla(120, 44%, 72%, 1) 50%, hsla(118, 34%, 42%, 1) 100%);
+  background: -moz-linear-gradient(135deg, hsla(123, 38%, 57%, 1) 0%, hsla(120, 44%, 72%, 1) 50%, hsla(118, 34%, 42%, 1) 100%);
+  background: -webkit-linear-gradient(135deg, hsla(123, 38%, 57%, 1) 0%, hsla(120, 44%, 72%, 1) 50%, hsla(118, 34%, 42%, 1) 100%);
 }
