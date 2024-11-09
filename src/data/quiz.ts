@@ -173,17 +173,17 @@ export const quizQuestions: QuizQuestionsProps[] = [
         type: NenTypeEnum.EMISSION,
       },
       {
-        answer: 'Tento abordar a situação de uma maneira única e original.',
-        type: NenTypeEnum.SPECIALIZATION,
-      },
-      {
         answer: 'Encaro os problemas diretamente, com força e determinação.',
         type: NenTypeEnum.ENHANCEMENT,
       },   
       {
         answer: 'Uso minha capacidade de influência para guiar as coisas.',
         type: NenTypeEnum.MANIPULATION,
-      },    
+      },  
+      {
+        answer: 'Tento abordar a situação de uma maneira única e original.',
+        type: NenTypeEnum.SPECIALIZATION,
+      },  
       {
         answer: 'Planejo cuidadosamente e tento resolver cada detalhe.',
         type: NenTypeEnum.CONJURATION,
@@ -203,14 +203,14 @@ export const quizQuestions: QuizQuestionsProps[] = [
       },
       { answer: 'Intenso(a) e expressivo(a).', type: NenTypeEnum.EMISSION },
       { answer: 'Energético(a) e direto(a).', type: NenTypeEnum.ENHANCEMENT },
+      {
+        answer: 'Misterioso(a) e introspectivo(a).',
+        type: NenTypeEnum.SPECIALIZATION,
+      },
       { answer: 'Detalhista e confiável.', type: NenTypeEnum.CONJURATION },
       {
         answer: 'Engraçado(a) e imprevisível.',
         type: NenTypeEnum.TRANSMUTATION,
-      },
-      {
-        answer: 'Misterioso(a) e introspectivo(a).',
-        type: NenTypeEnum.SPECIALIZATION,
       },
     ],
   },
@@ -226,6 +226,10 @@ export const quizQuestions: QuizQuestionsProps[] = [
         type: NenTypeEnum.MANIPULATION,
       },
       {
+        answer: 'Exploro a habilidade de um jeito único e incomum.',
+        type: NenTypeEnum.SPECIALIZATION,
+      },
+      {
         answer: 'Pratico até dominar, sem atalhos.',
         type: NenTypeEnum.ENHANCEMENT,
       },
@@ -237,19 +241,11 @@ export const quizQuestions: QuizQuestionsProps[] = [
         answer: 'Vou direto ao ponto e aprendo praticando rapidamente.',
         type: NenTypeEnum.EMISSION,
       },
-      {
-        answer: 'Exploro a habilidade de um jeito único e incomum.',
-        type: NenTypeEnum.SPECIALIZATION,
-      },
     ],
   },
   {
     question: 'Como você lida com a pressão em situações extremas?',
     options: [
-      {
-        answer: 'Reajo de maneira intensa e rápida, seguindo meu instinto.',
-        type: NenTypeEnum.EMISSION,
-      },
       {
         answer: 'Mantenho uma abordagem única, seguindo minha intuição.',
         type: NenTypeEnum.SPECIALIZATION,
@@ -270,6 +266,10 @@ export const quizQuestions: QuizQuestionsProps[] = [
         answer:
           'Tento manipular as variáveis para tornar a situação mais favorável.',
         type: NenTypeEnum.MANIPULATION,
+      },
+      {
+        answer: 'Reajo de maneira intensa e rápida, seguindo meu instinto.',
+        type: NenTypeEnum.EMISSION,
       },
     ],
   },
