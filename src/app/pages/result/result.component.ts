@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, inject, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { charactersData, nenTypeData } from '../../../data/quiz';
@@ -11,7 +12,7 @@ declare let gtag: Function;
 @Component({
   selector: 'app-result',
   standalone: true,
-  imports: [CharacterCardComponent, NenDiagramComponent, HexagonComponent],
+  imports: [CharacterCardComponent, NenDiagramComponent, HexagonComponent, CommonModule],
   templateUrl: './result.component.html',
 })
 export class ResultComponent implements OnInit {

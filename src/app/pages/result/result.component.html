@@ -9,7 +9,7 @@
         }}</span>
 
         <app-nen-diagram
-          class="absolute w-80 h-80  grid grid-cols-3 grid-rows-3 font-bold top-0"
+          class="absolute w-80 h-80 grid grid-cols-3 grid-rows-3 font-bold top-0"
           type="{{ nenTypeResult.type.toString() }}"
         ></app-nen-diagram>
       </div>
@@ -29,15 +29,20 @@
       <span class="font-bold text-hxh-grayish-green-dark"
         >Personagens relacionados a sua categoria de Nen:</span
       >
-      <div class="flex gap-4 overflow-x-auto ">
-        @if (relatedCharacters) { 
-          @for (character of relatedCharacters; track $index) {
-            <app-character-card
-              image_url="{{ character.image_path }}"
-              name="{{ character.name }}"
-              class="relative h-52 w-32 bg-white rounded-md shadow-2xl border-4 border-hxh-grayish-green-dark hover:brightness-75"
-            />
-        } }
+
+      <div class="flex gap-4 overflow-x-auto">
+        <ng-template
+          ngFor
+          let-character
+          [ngForOf]="relatedCharacters"
+          let-i="index"
+        >
+          <app-character-card
+            image_url="{{ character.image_path }}"
+            name="{{ character.name }}"
+            class="relative h-52 w-32 bg-white rounded-md shadow-2xl border-4 border-hxh-grayish-green-dark hover:brightness-75"
+          />
+        </ng-template>
       </div>
       <button (click)="onRestart()" class="ml-auto btn-secondary">
         REFAZER QUIZ
